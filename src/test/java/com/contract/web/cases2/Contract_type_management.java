@@ -13,7 +13,8 @@ public class Contract_type_management extends Base4{
 		click(getElement("主页", "企业服务"));
 		click(getElement("主页", "合同类型管理"));
 		click(getElement("合同类型管理页", "添加合同类型模板"));
-		
-		
+		String actualhetong = getElement(By.xpath("//span[text()='添加合同类型']")).getText();
+		AssertionUtil.assertTextEquals(actualhetong, "565656");
+		click(getElement("主页", "企业签章"));
 	}
 }
